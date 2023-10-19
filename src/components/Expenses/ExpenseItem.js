@@ -1,13 +1,16 @@
+import React, { useState } from 'react';
 import ExpenseDate from './ExpenseDate';
 import './ExpenseItem.css'
 import Card from '../UI/Card';
 
 function ExpenseItem(props) {
-
-  let title = props.expenses.title
+  
+  const [title, setTitle] = useState(props.expenses.title)
+    
 
   const changeTitle = () => {
-    title = 'asd'
+    setTitle('new Title')
+    console.log(title)
   }
 
   
