@@ -8,9 +8,12 @@ const ExpenseForm = () => {
   });
 
   const titleChange = (event) => {
-    setForm({
-      ...form,
-      title: event.target.value,
+    // setForm({
+    //   ...form,
+    //   title: event.target.value,
+    // });
+    setForm((prevState) => {
+      return { ...prevState, title: event.target.value };
     });
   };
   const amountChange = (event) => {
