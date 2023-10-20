@@ -2,7 +2,7 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import './Expenses.css'
 function Expenses(props) {
-  console.log(props.expense)
+  // console.log(props.expense)
 
   return (
     <Card className="expenses">
