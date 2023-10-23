@@ -29,8 +29,8 @@ const App = () => {
     },
   ];
 
-  const addExpense = (expense) => {
-    console.log("App JS", expense);
+  const addExpense = (data) => {
+    console.log("App.js", data);
   };
 
   return (

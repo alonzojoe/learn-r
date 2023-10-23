@@ -4,13 +4,13 @@ import "./NewExpense.css";
 
 const NewExpense = (props) => {
   const saveExpense = (data) => {
-    const expenseData = {
+    const expense = {
       ...data,
       id: Math.random().toString(),
     };
 
-    console.log("receive data from child", expenseData);
-    props.onAddExpense(expenseData);
+    console.log(expense);
+    props.onAddExpense(expense);
   };
 
   return (
