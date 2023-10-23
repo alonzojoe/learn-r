@@ -1,37 +1,44 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 const ExpenseForm = () => {
-  const [form, setForm] = useState({
-    title: "",
-    amount: "",
-    date: "",
-  });
+  //   const [form, setForm] = useState({
+  //     title: "",
+  //     amount: "",
+  //     date: "",
+  //   });
+
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [date, setDate] = useState("");
 
   const titleChange = (event) => {
     // setForm({
     //   ...form,
     //   title: event.target.value,
     // });
-    setForm((prevState) => {
-      return { ...prevState, title: event.target.value };
-    });
+    // setForm((prevState) => {
+    //   return { ...prevState, title: event.target.value };
+    // });
+    setTitle(event.target.value);
   };
   const amountChange = (event) => {
-    setForm({
-      ...form,
-      amount: event.target.value,
-    });
+    // setForm({
+    //   ...form,
+    //   amount: event.target.value,
+    // });
+    setAmount(event.target.value);
   };
   const dateChange = (event) => {
-    setForm({
-      ...form,
-      date: event.target.value,
-    });
+    // setForm({
+    //   ...form,
+    //   date: event.target.value,
+    // });
+    setDate(event.target.value);
   };
 
   return (
     <form>
-      {form.title}-{form.amount}-{form.date}
+      {title}-{amount}-{date}
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
