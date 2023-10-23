@@ -17,4 +17,4 @@ const ExpenseList = (props) => {
     </ul>)
 } 
 
-export default ExpenseList;
+export default ExpenseList; 

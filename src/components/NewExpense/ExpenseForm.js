@@ -63,7 +63,7 @@ const ExpenseForm = (props) => {
 
   return (
     <form onSubmit={submitForm}>
-      {title}-{amount}-{date}
+      {/* {title}-{amount}-{date} */}
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
