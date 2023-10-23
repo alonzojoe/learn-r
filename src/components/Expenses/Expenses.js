@@ -1,4 +1,4 @@
-import ExpenseItem from "./ExpenseItem";
+import ExpenseList from "./ExpensesList";
 import Card from "../UI/Card";
 import ExpenseFilter from "./ExpenseFilter";
 import "./Expenses.css";
@@ -16,13 +16,7 @@ function Expenses(props) {
     return expense.date.getFullYear().toString() === filterYear;
   });
 
-  let expensesContent = <p style={{ color: "#fff" }}>No Expenses Found</p>;
-
-  if (filteredExpenses.length > 0) {
-    expensesContent = filteredExpenses.map((expense) => (
-      <ExpenseItem key={expense.id} expenses={expense} />
-    ));
-  }
+ 
 
   return (
     <Card className="expenses">
@@ -30,7 +24,7 @@ function Expenses(props) {
         selected={filterYear}
         onChangeFilter={filterChangeHandler}
       />
-      {expensesContent}
+      <ExpenseList expenses={filteredExpenses} />
       {/* {filteredExpenses.length === 0 && (
         <p style={{ color: "#fff" }}>No Expenses Found</p>
       )}
